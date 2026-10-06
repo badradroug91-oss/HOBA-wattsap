@@ -19,7 +19,7 @@ export const storeConfig = {
     price: 78, // الثمن بالدرهم (بدل الرقم هنا ليظهر في كامل الموقع)
     currency: "درهم",
     discountTag: "خصم 50%",
-    image: "/src/assets/images/hoba_amlou_product_1791307022731.jpg",
+    image: "/hoba_amlou_product_1791307022731.jpg",
     ribbonText: "✦ منتج طبيعي أصيل ومضمون 100% ✦",
   },
 

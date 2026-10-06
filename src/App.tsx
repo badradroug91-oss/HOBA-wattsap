@@ -4,7 +4,6 @@
  */
 
 import { useState, useRef } from 'react';
-import { Smartphone, Monitor } from 'lucide-react';
 import { AnnouncementBar } from './components/AnnouncementBar';
 import { HeroBanner } from './components/HeroBanner';
 import { OrderForm } from './components/OrderForm';
@@ -25,41 +24,6 @@ export default function App() {
       className="min-h-screen bg-[#e9ece9] text-slate-800 font-['Tajawal',sans-serif] selection:bg-emerald-700 selection:text-white"
       dir="rtl"
     >
-      {/* 🖥️ أداة تبديل وضع العرض على شاشات الكمبيوتر (Desktop Preview Bar) */}
-      <aside
-        aria-label="أدوات العرض"
-        className="hidden lg:flex items-center justify-between px-6 py-2.5 bg-[#152e24] text-emerald-100 text-xs border-b border-emerald-800/40 sticky top-0 z-50"
-      >
-        <div className="flex items-center gap-2 font-medium">
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>معاينة متجاوبة - تصميم أصلي ومطابق للموبايل والكمبيوتر</span>
-        </div>
-        <div className="flex items-center gap-2 bg-emerald-950/60 p-1 rounded-lg border border-emerald-700/50">
-          <button
-            onClick={() => setViewMode('mobile')}
-            className={`flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold transition-colors cursor-pointer ${
-              viewMode === 'mobile'
-                ? 'bg-emerald-600 text-white shadow-sm'
-                : 'text-emerald-300 hover:text-white'
-            }`}
-          >
-            <Smartphone className="w-3.5 h-3.5" />
-            <span>عرض الهاتف (Mobile Frame)</span>
-          </button>
-          <button
-            onClick={() => setViewMode('fluid')}
-            className={`flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold transition-colors cursor-pointer ${
-              viewMode === 'fluid'
-                ? 'bg-emerald-600 text-white shadow-sm'
-                : 'text-emerald-300 hover:text-white'
-            }`}
-          >
-            <Monitor className="w-3.5 h-3.5" />
-            <span>عرض متجاوب كامل (Full Responsive)</span>
-          </button>
-        </div>
-      </aside>
-
       {/* 📱 الإطار الرئيسي للصفحة (Main Landing Page Container) */}
       <main
         className={`mx-auto transition-all duration-300 ${
